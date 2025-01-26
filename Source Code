@@ -1,0 +1,40 @@
+import random
+
+candidates = ['A', 'B', 'C']
+
+USER_Choice = input('Please pick between any of the 3 candidates ')
+
+CPU_CHOICE = random.choice(candidates)
+print(CPU_CHOICE)
+if USER_Choice == 'A':
+    if CPU_CHOICE == 'B':
+        print('User wins')
+
+    elif CPU_CHOICE == 'C':
+        print('CPU wins')
+
+    else:
+        print('You voted the same')
+
+if USER_Choice == 'B':
+    if CPU_CHOICE == 'A':
+        print('CPU wins')
+
+    elif CPU_CHOICE == 'C':
+        print('User wins')
+
+    else:
+        print('You voted the same')
+
+if USER_Choice == 'C':
+    if CPU_CHOICE == 'A':
+        print('User wins')
+
+    elif CPU_CHOICE == 'B':
+        print('CPU wins')
+
+    else:
+        print('You voted the same')
+
+elif USER_Choice not in candidates:
+    print('Please pick a legitimate candidate')
